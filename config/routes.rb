@@ -29,6 +29,7 @@ Rails.application.routes.draw do
 
   get "/attendingconcerts", to: "attending_concerts#index"
   get "/attendingconcert/:id", to: "attending_concerts#show"
+  post "attendingconcert/new", to: "attending_concerts#create"
 
   get "/followers/", to: "followers#index"
   get "/follower/:id", to: "followers#show"
