@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_09_213707) do
+ActiveRecord::Schema.define(version: 2021_07_13_184918) do
 
   create_table "artists", force: :cascade do |t|
     t.string "name"
@@ -22,6 +22,21 @@ ActiveRecord::Schema.define(version: 2021_06_09_213707) do
   create_table "attending_concerts", force: :cascade do |t|
     t.integer "fan_id"
     t.integer "concert_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "chatboxes", force: :cascade do |t|
+    t.integer "fan_id"
+    t.string "comment"
+    t.string "fan_name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "chats", force: :cascade do |t|
+    t.string "fan_name"
+    t.string "comment"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

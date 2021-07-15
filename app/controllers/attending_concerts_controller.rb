@@ -21,10 +21,20 @@ class AttendingConcertsController < ApplicationController
                     end 
         end 
 
+        def destroy 
+            concert = AttendingConcert.find(params[:id])
+            concert.destroy
+            render json: concert
+        end
+
         private 
 
+        def find_concert 
+           concert = AttendingConcert.find(params[:id])
+        end
+
         def attendingconcert_params
-            params.permit(:concert_id, :fan_id)
+            params.permit(:fan_id, :concert_id)
         end 
 
 

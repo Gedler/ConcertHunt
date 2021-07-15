@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :chatboxes
+  resources :chats
+  resources :main_chatboxes
   resources :followers   #give access to all the controllers so actions can display
   resources :attending_concerts
   resources :concerts
@@ -25,14 +28,35 @@ Rails.application.routes.draw do
   post "fan/new", to: "fans#create"
   patch "fan/:id", to: "fans#update"
   delete "fan/:id", to: "fans#destroy"
+  post "/login", to: "fans#login"
 
 
   get "/attendingconcerts", to: "attending_concerts#index"
   get "/attendingconcert/:id", to: "attending_concerts#show"
   post "attendingconcert/new", to: "attending_concerts#create"
+  delete "/attendingconcert/:id", to: "attending_concerts#destroy"
 
   get "/followers/", to: "followers#index"
-  get "/follower/:id", to: "followers#show"
+  get "/follower/:id", to: "followers#show" 
+  post "follower/new", to: "followers#create"
+  delete "/follower/:id", to: "followers#destroy"
+
+
+  get "/chatbox/", to: "chatboxes#index"
+  post "/chatbox/new", to: "chatboxes#create"
+  delete "/chatbox/:id", to: "chatboxes#destroy" 
+  get "/chatbox/:id", to: "chatboxes#show" 
+
+
+  get "/chats/", to: "chats#index"
+  post "/chat/new", to: "chats#create"
+  delete "/chat/:id", to: "chats#destroy" 
+  get "/chat/:id", to: "chats#show" 
+
+
+
+
+
 end
 
 

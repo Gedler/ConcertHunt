@@ -20,9 +20,9 @@ end
         self.artist.count 
     end 
 
-    def attending_concerts #How many upcoming concerts is this fan going to?
-        self.attending_concerts.count 
-    end
+    #def attending_concerts #How many upcoming concerts is this fan going to?
+        #self.attending_concerts.count 
+    #end
 
     def attending_concerts_info #What concerts is this fan going to?
         self.concerts.each do |concert|
