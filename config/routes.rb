@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
+  resources :concerts
+  resources :fans
+  resources :artists
   resources :chatboxes
   resources :chats
   resources :main_chatboxes
   resources :followers   #give access to all the controllers so actions can display
   resources :attending_concerts
-  resources :concerts
-  resources :fans
-  resources :artists
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
 

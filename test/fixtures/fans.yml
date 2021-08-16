@@ -3,9 +3,13 @@
 one:
   user: MyString
   location: MyString
+  pronouns: MyString
   password_digest: MyString
+  image: MyString
 
 two:
   user: MyString
   location: MyString
+  pronouns: MyString
   password_digest: MyString
+  image: MyString

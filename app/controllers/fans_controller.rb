@@ -1,6 +1,5 @@
 class FansController < ApplicationController
-
-before_action :find_fan, only: [:show, :destroy, :update] 
+    before_action :find_fan, only: [:show, :destroy, :update] 
 #skip_before_action :logged_in?, only: [:create, :login, :index]
 
     def index 
@@ -55,11 +54,8 @@ private
     end 
 
     def fan_params
-        params.permit(:user, :location, :password)
+        params.permit(:user, :password, :image, :location, :pronouns, :image)
     end 
-
-
-
 
 
 

@@ -1,4 +1,4 @@
-class Fan < ApplicationRecord 
+class Fan < ApplicationRecord
     has_secure_password
     has_many :attending_concerts,  dependent: :destroy
     has_many :concerts, through: :attending_concerts
@@ -30,6 +30,4 @@ end
         end
     end 
 
-end 
-
-
+end

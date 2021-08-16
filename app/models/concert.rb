@@ -25,25 +25,4 @@ class Concert < ApplicationRecord
     
    
 
-     
-    
-    
-    
-    
-    
-    
-    
-
-
-    
-
-
-
-
-
-
-    
 end
-
-
-# Can do this on React interating through the array and returning the concert card

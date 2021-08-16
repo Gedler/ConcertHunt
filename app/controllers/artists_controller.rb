@@ -1,5 +1,4 @@
-class ArtistsController < ApplicationController 
-
+class ArtistsController < ApplicationController
     before_action :find_artist, only: [:show, :update, :destroy] #you can only access the variable as an instance variable!
     
     def index 
@@ -39,8 +38,10 @@ class ArtistsController < ApplicationController
  
 
     def artist_params 
-        params.permit(:name, :location)
+        params.permit(:name, :location, :image)
     end 
 
 
-end 
+
+
+end

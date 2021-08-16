@@ -1,5 +1,4 @@
 class ConcertsController < ApplicationController
-
     before_action :find_concert, only: [:show, :destroy, :update]
 
 
@@ -39,22 +38,7 @@ class ConcertsController < ApplicationController
 
 
     def concert_params
-        params.permit(:venue, :date, :location, :price, :artist_id)
+        params.permit(:venue, :date, :location, :price, :image, :artist_id)
     end 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 end

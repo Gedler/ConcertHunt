@@ -2,14 +2,16 @@
 
 one:
   venue: MyString
-  date: MyString
   location: MyString
+  image: MyString
+  date: MyString
   price: 1
   artist_id: 1
 
 two:
   venue: MyString
-  date: MyString
   location: MyString
+  image: MyString
+  date: MyString
   price: 1
   artist_id: 1
